@@ -42,8 +42,15 @@ function checkGuess() {
   guessField.value = ' ';
   guessField.focus();
 }
+document.addEventListener('keydown',function(e){
+  if (e.keyCode == 13) {
+  checkGuess();
+}  
+});
 
-guessSubmit.addEventListener('click', checkGuess);
+guessSubmit.addEventListener('click',function(){
+  checkGuess();
+});
 
   
 function setGameOver(){
